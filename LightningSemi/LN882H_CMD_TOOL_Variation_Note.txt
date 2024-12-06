@@ -1,0 +1,4 @@
+despite the spreadsheets referencing different versions (v1.0.15 and v1.0.16) both exe files report they're v1.0.16 despite clear differences in file size
+
+
+.\LN882H_CMD_Tool.exe version
