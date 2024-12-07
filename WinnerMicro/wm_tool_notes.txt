@@ -1,0 +1,3 @@
+wm_tool.exe - pulled from latest W800 SDK https://www.winnermicro.com/upload/1/editor/1692954953451.rar
+
+does not respond to "wm_tool.exe -v" despite being listed as a switch option. 
