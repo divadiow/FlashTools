@@ -1,0 +1,1 @@
+python rtltool.py -p COM48 -b1500000 rf 0 0x400000 ff.bin
