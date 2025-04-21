@@ -25,7 +25,7 @@ if "%op%"=="1" (
     set /p filename="Enter filename to save flash dump: "
     echo.
     echo Running: python rtltool.py --port !comport! rf !start_addr! !size! !filename!
-    python rtltool.py --port !comport! rf !start_addr! !size! !filename!
+    python %~dp0rtltool.py --port !comport! rf !start_addr! !size! !filename!
 ) else if "%op%"=="2" (
     echo --- Write Flash Selected ---
     set /p start_addr="Enter start address (e.g., 0x0): "
@@ -52,12 +52,12 @@ if "%op%"=="1" (
     echo Erasing flash from address 0x0 to 0x200000...
     echo.
     echo Running: python rtltool.py --port !comport! es 0x0 0x200000
-    python rtltool.py --port !comport! es 0x0 0x200000
+    python %~dp0rtltool.py --port !comport! es 0x0 0x200000
 ) else if "%op%"=="6" (
     echo --- Get Flash Status Selected ---
     echo.
     echo Running: python rtltool.py --port !comport! gf
-    python rtltool.py --port !comport! gf
+    python %~dp0rtltool.py --port !comport! gf
 ) else (
     echo Invalid option.
 )
