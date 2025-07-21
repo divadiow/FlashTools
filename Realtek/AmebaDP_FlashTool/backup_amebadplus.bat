@@ -1,0 +1,1 @@
+python3 flash.py -p COM16 -d devices/Profiles/AmebaDplus_FreeRTOS_NOR.rdev -i . -b 1500000 -or bw20.bin
