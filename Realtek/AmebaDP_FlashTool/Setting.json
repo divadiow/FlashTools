@@ -1,0 +1,16 @@
+{
+  "SensePacketCount": 32,
+  "RequestRetryCount": 3,
+  "RequestRetryIntervalInMillisecond": 10,
+  "AsyncResponseTimeoutInMilliseccond": 1000,
+  "SyncResponseTimeoutInMillisecond": 10000,
+  "BaudrateSwitchDelayInMillisecond": 200,
+  "SwitchBaudrateAtFloader": 0,
+  "WriteResponseTimeoutInMillisecond": 2000,
+  "FloaderBootDelayInMillisecond": 1000,
+  "AutoSwitchToDownloadModeWithDtrRts": 0,
+  "ProgramConfig1": 0,
+  "ProgramConfig2": 0,
+  "DisableNandAccessWithUart": 0,
+  "RamDownloadPaddingByte": 0
+}
