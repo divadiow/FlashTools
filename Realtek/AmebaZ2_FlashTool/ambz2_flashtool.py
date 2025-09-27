@@ -207,7 +207,6 @@ class AmebaZ2Serial:
     def change_baud(self, baudrate: int):
         """Ask ROM to switch baud; then we switch host and expect 'OK'."""
         self.command(f"ucfg {baudrate} 0 0")
-        self.set_baudrate(baudrate)
         self.push_timeout(1.0)
         try:
             resp = self.read()
@@ -215,8 +214,12 @@ class AmebaZ2Serial:
             raise RuntimeError("Timed out while changing baud rate")
         finally:
             self.pop_timeout()
-        if resp != b"OK":
+        if not resp or not resp.lstrip().startswith(b"OK"):
             raise RuntimeError(f"Baud rate change not OK: {resp!r}")
+
+        # Switch host side after ROM acknowledgement and clear any residual data
+        self.set_baudrate(baudrate)
+        self.flush()
         # relink to confirm
         self.link()
 
